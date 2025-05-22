@@ -1,0 +1,21 @@
+meta {
+  name: get configuration values
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{host}}/smart_segments/configuration_values?school_id=2335&urlnick=DemoUniversity&model_name=test_model
+  body: none
+  auth: bearer
+}
+
+params:query {
+  school_id: 2335
+  urlnick: DemoUniversity
+  model_name: test_model
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}

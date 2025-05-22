@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "modeling-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

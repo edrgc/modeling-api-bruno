@@ -1,0 +1,15 @@
+meta {
+  name: datasets update
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://{{host}}/smart_segments/datasets/update
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}
