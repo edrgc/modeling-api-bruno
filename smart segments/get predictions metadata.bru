@@ -1,0 +1,21 @@
+meta {
+  name: get predictions metadata
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://{{host}}/smart_segments/models/predictions/metadata?school_id=2335&urlnick=DemoUniversity&model_name=test_model
+  body: none
+  auth: bearer
+}
+
+params:query {
+  school_id: 2335
+  urlnick: DemoUniversity
+  model_name: test_model
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}

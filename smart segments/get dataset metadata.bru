@@ -1,0 +1,15 @@
+meta {
+  name: get dataset metadata
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://{{host}}/smart_segments/datasets/metadata
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}
