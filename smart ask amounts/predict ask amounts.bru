@@ -1,0 +1,31 @@
+meta {
+  name: predict ask amounts
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{host}}/smart-ask-amounts/predict
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}
+
+body:json {
+  {
+      "constituent_ids": [10347,10348,10349,10350,10352,10354,10357,10358,10359,10361,10362,10363],
+      "school_id": "2660",
+      "school_name": "AshevilleSchool",
+      "segment_id": "202",
+      "strategy": "conservative",
+      "number_of_ask_amounts": 3,
+      "test_run": true
+  }
+}
