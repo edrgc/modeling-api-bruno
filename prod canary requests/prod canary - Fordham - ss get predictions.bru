@@ -1,0 +1,21 @@
+meta {
+  name: prod canary - Fordham - ss get predictions
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://{{host}}/smart_segments/models/predictions?school_id=13&urlnick=FordhamUniversity&model_name=advocacy
+  body: none
+  auth: bearer
+}
+
+params:query {
+  school_id: 13
+  urlnick: FordhamUniversity
+  model_name: advocacy
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: prod canary - Westminster School CT - ss get predictions
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://{{host}}/smart_segments/models/predictions?school_id=2341&urlnick=WestminsterSchoolct&model_name=recurring_gifts
+  body: none
+  auth: bearer
+}
+
+params:query {
+  school_id: 2341
+  urlnick: WestminsterSchoolct
+  model_name: recurring_gifts
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}

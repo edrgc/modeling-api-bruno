@@ -1,0 +1,28 @@
+meta {
+  name: prod canary - Fordham - ss predict smart segments copy
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://{{host}}/smart_segments/models/predict
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}
+
+body:json {
+  {
+      "school_id": "2341",
+      "urlnick": "WestminsterSchoolct",
+      "model_name": "recurring_gifts",
+      "retrain": true
+  }
+}

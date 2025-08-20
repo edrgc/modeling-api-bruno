@@ -1,0 +1,28 @@
+meta {
+  name: prod canary - Fordham - ss predict smart segments
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://{{host}}/smart_segments/models/predict
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}
+
+body:json {
+  {
+      "school_id": "13",
+      "urlnick": "FordhamUniversity",
+      "model_name": "advocacy",
+      "retrain": true
+  }
+}
