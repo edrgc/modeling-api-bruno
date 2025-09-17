@@ -1,0 +1,27 @@
+meta {
+  name: prod canary - collegeoftheholycross - ss predict smart segments
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://{{host}}/smart_segments/models/predict
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{accepted_keys}}
+}
+
+body:json {
+  {
+    "school_id": 109, 
+    "urlnick": "CollegeoftheHolyCross", 
+    "model_name": "recurring_gifts"
+  }
+}
